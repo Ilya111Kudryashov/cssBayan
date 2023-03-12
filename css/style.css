@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Helvetica', sans-serif;
+    src: url('../fonts/helvetica.woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Helvetica-bold', sans-serif;
+    src: url('../fonts/helvetica-bold.woff2');
+    font-style: normal;
+    font-weight: 700;
+}
+html{
+    box-sizing: border-box;
+  }
+  
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+  }
+.container{
+    max-width: 500px;
+    padding: 0 10px;
+    margin: 20px auto;
+}
+body{
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #5c5c5e;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+.title{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+}
+.accordion__item{
+    border: 1px solid #b91125;
+    background-color: #311d1d;
+    
+}
+.accordion__title{
+    color: #fff;
+    font-size: 20px;
+    display: block;
+    cursor: pointer;
+    padding: 15px;
+    transition: all .3s ease;
+}
+.accordion__title:hover{
+    background-color: #745e5e;
+    color: #000;
+}
+.accordion__input:checked ~ .accordion__title{
+    background-color: #745e5e;
+}
+.accordion__input:checked ~.accordion__content{
+    display: block;
+}
+
+.accordion__content{
+    display: none;
+    padding: 15px;
+}
+.accordion__input{
+    width: 0;
+    height: 0;
+    appearance: none;
+}
