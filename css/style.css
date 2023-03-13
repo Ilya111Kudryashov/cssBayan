@@ -42,35 +42,31 @@ body{
     border: 1px solid #b91125;
     background-color: #311d1d;
 }
+
+
 .accordion__title{
+    position: relative;
     color: #fff;
     font-size: 20px;
     display: block;
     cursor: pointer;
     padding: 15px;
+    order: -1;
+    width: 100%;
     transition: all .3s ease;
 }
 
-.accordion__title:hover{
-    background-color: #745e5e;
-    color: #000;
-}
-.accordion__input:checked ~ .accordion__title{
-    background-color: #745e5e;
-}
-.accordion__input:checked ~.accordion__content{
-    max-height: 40vh;
-}
 
 .accordion__content{
     max-height: 0;
     overflow: hidden;
-    padding: 15px;
+    padding: 5px;
     text-align: center;
     transition: all .5s ease;
 }
 .accordion__content img{
     padding-top: 20px;
+    width: 100%;
 }
 .accordion__input{
     width: 0;
@@ -83,4 +79,38 @@ body{
 }
 .accordion__input:hover ~ .accordion__content{
     max-height: 40vh;
+}
+.accordion__input:checked ~.accordion__content{
+    max-height: 40vh;
+}
+.accordion__title:hover{
+    background-color: #745e5e;
+    color: #000;
+}
+
+.accordion__input:checked ~ .accordion__title{
+    background-color: #745e5e;
+}
+
+
+.accordion__title::after{
+    content: url('../images/icon/plus.svg');
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+.accordion__input:checked ~ .accordion__title::after{
+    transform: rotate(45deg) translateY(-70%);
+    right: 45px;
+}
+.accordion__input:hover ~ .accordion__title::after{
+    transform: rotate(45deg) translateY(-70%);
+    right: 45px;
+}
+
+@media(max-width:420px){
+    .accordion__title{
+        font-size: 16px;
+    }
 }
