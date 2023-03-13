@@ -13,15 +13,11 @@
 html{
     box-sizing: border-box;
   }
-  
 *,
 *::before,
 *::after{
     box-sizing: inherit;
   }
-  /* img{
-    display: block;
-  } */
 .container{
     max-width: 500px;
     padding: 0 10px;
@@ -45,7 +41,6 @@ body{
 .accordion__item{
     border: 1px solid #b91125;
     background-color: #311d1d;
-    
 }
 .accordion__title{
     color: #fff;
@@ -64,12 +59,10 @@ body{
     background-color: #745e5e;
 }
 .accordion__input:checked ~.accordion__content{
-    /* display: block; */
     max-height: 40vh;
 }
 
 .accordion__content{
-    /* display: none; */
     max-height: 0;
     overflow: hidden;
     padding: 15px;
@@ -87,7 +80,6 @@ body{
 .accordion:hover .accordion__item{
     background-color: #533985;
     color: #000;
-    /* display: none; */
 }
 .accordion__input:hover ~ .accordion__content{
     max-height: 40vh;
