@@ -99,6 +99,7 @@ body{
     top: 50%;
     right: 15px;
     transform: translateY(-50%);
+    transition: all .3s ease;
 }
 .accordion__input:checked ~ .accordion__title::after{
     transform: rotate(45deg) translateY(-70%);
